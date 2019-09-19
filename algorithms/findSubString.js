@@ -25,11 +25,11 @@ export function findSubstring(master, sub){
   }
 
   // Reduce
-  a.reduce( (m, c) => {
-    if(!m[c]){
-      m[c] = getNextPrime()
+  a.reduce( (accumulator, item) => {
+    if(!accumulator[item]){
+      accumulator[item] = getNextPrime()
     }
-    return m
+    return accumulator
   }, charMap);
 
   b.reduce( (m, c) => {
