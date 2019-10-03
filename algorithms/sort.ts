@@ -11,13 +11,11 @@ let numbers = [
 ];
 
 // Sorting is case sensitive
-foo.sort()
-foo
+foo.sort() //?
+
 // Case Insensitive Sort
-foo.sort((a,b)=> a.toLowerCase().localeCompare(b.toLowerCase()));
-foo
+foo.sort((a,b)=> a.toLowerCase().localeCompare(b.toLowerCase())); //?
 
 // Be careful when sorting numbers!!!
-numbers
-numbers.sort((a,b)=>a-b) 
-numbers
+numbers.sort() //?
+numbers.sort((a,b)=>a-b)  //?

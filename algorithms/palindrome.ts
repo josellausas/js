@@ -8,8 +8,6 @@ function isPalindrome(str: string): boolean {
   let startChar = chars[startIndex];
   let endChar = chars[endIndex];
 
-  let isPalindrome = false;
-
   while(startChar === endChar){
     if(startIndex === endIndex || startIndex > endIndex){
       return true;
