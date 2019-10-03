@@ -1,0 +1,16 @@
+{
+  "name": "my-js",
+  "version": "1.0.0",
+  "description": "My JS Tools",
+  "main": "index.js",
+  "repository": "https://github.com/zunware/js.git",
+  "author": "zunware <jose@josellausas.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "start": "tsc index.ts && node index.js",
+    "build": "tsc index.ts"
+  }
+}
