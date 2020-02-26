@@ -24,7 +24,7 @@ let getWordHash = (w) => {
   return sum;
 }
 
-function getHashMap(wordArray){
+function getHashMap(wordArray : any[]){
   let map = [];
   wordArray.forEach( w => {
     // Map the word according to its letters

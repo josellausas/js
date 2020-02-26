@@ -38,6 +38,22 @@ function getCostliest() {
   return cheapest;
 }
 
+function hotelAccumulator(counter, binaryEvalFn){
+  return function(hotels){
+    hotels.forEach( h => {
+      if(binaryEvalFn(h)) {
+        counter++;
+      }
+    });
+    return counter;
+  } 
+}
+
+const hasPrice = (hotel) => typeof hotel.price === "number"
+
+
+
+
 // Run it:
 listHotels();
 getCheapest();  //?
@@ -67,3 +83,20 @@ const memoCostliest = memoSomething(getCheapest);
 memoCostliest("A", 3); //?
 memoCostliest("B"); // ?
 memoCostliest("B"); // ?
+
+// Lazyly calculate if a hotel has a price
+const memoHasPrice = memoSomething(hasPrice);
+let hotelsWithPricesCount = 0; 
+const calculateHotelsWithPrices = hotelAccumulator(0, memoHasPrice);
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+hotelsWithPricesCount = calculateHotelsWithPrices(hotels); //?
+
+
+

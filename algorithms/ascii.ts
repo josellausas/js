@@ -1,4 +1,4 @@
-export function toAscii(string){
+export function toAscii(string: string){
   return [...string].map( c => {
     return c.charCodeAt(0) & 255;
   });
