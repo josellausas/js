@@ -1,13 +1,31 @@
 /**
  * Given: An array of numbers (+ and -).
  * Find: Start and end indeces for subsequence with the largest sum
+ * 
+ * Resources: [
+ *  - Data Structures and Problem Solving Using C++
+ * ]
  */
-
 let a = [0,1,2,3,4,5,6,7,8,9,10];
 let b = [-99,0,-99];
 let c = [-99,1,-99];
 let d = [0,1,2,-99,-1,15,-4,8,9,10,-99,98];
 let e = [0,1,2,-99,-1,150,-4,8,9,10,-99,98];
+
+class Answer {
+  constructor(best,start,end){
+    super(this);
+    this.best = best;
+    this.start = start;
+    this.end = end;
+  }
+
+  getJSON() {
+    return {
+      best, start, end
+    }
+  }
+}
 
 function getLargestSub(a){
   let bestStart = 0;
@@ -34,8 +52,9 @@ function getLargestSub(a){
   return {bestSum, bestStart, bestEnd}
 }
 
-getLargestSub(a); //?
-getLargestSub(b); //?
-getLargestSub(c); //?
-getLargestSub(d); //?
-getLargestSub(e); //?
+getLargestSub(a); /*?.*/
+getLargestSub(b); //?.
+getLargestSub(c); //?.
+getLargestSub(d); //?.
+getLargestSub(e); //?.
+
